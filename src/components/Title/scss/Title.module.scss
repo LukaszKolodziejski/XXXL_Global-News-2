@@ -1,0 +1,17 @@
+.Header {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+
+  &__Title {
+    display: block;
+    padding: 20px 0;
+    line-height: 32px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #465252;
+    @media (min-width: 800px) {
+      padding: 43px 0;
+    }
+  }
+}

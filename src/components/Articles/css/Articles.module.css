@@ -1,0 +1,30 @@
+.Articles {
+  text-align: center;
+}
+
+.Articles__Content {
+  text-align: left;
+  margin-top: 14px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (2fr)[1];
+      grid-template-columns: repeat(1, 2fr);
+  row-gap: 41px;
+}
+
+@media (min-width: 640px) {
+  .Articles__Content {
+    -webkit-column-gap: 25px;
+            column-gap: 25px;
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Articles__Content {
+    -ms-grid-columns: (2fr)[3];
+        grid-template-columns: repeat(3, 2fr);
+  }
+}
+/*# sourceMappingURL=Articles.module.css.map */

@@ -1,0 +1,103 @@
+.Button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+
+  &:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.Clearbtn {
+  background: #ffffff;
+  border: 1px solid #493be1;
+  height: 32px;
+  width: 164px;
+  font-size: 16px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  color: #493be1;
+  @media (min-width: 640px) {
+    float: right;
+  }
+}
+
+.LoadMoreButton {
+  display: inline-block;
+  background: #ffffff;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid #493be1;
+  width: 330px;
+  height: 48px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #493be1;
+}
+
+.ReadMore {
+  display: block;
+  background: #493be1;
+  text-decoration: none;
+  border: 1px solid #493be1;
+  width: 100%;
+  padding: 16px 0;
+  height: 48px;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+}
+
+.Dropbtn {
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #ffffff;
+  margin-right: 17.5px;
+  height: 32px;
+  width: 104px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    border-right: 1.5px solid #969696;
+    border-bottom: 1.5px solid #969696;
+    height: 6px;
+    width: 6px;
+    transform: rotate(45deg);
+    margin: 4px;
+  }
+}
+
+.Source {
+  display: block;
+  background: #493be1;
+  text-decoration: none;
+  border: 1px solid #493be1;
+  width: 100%;
+  padding: 16px 0;
+  height: 48px;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  bottom: 0;
+  @media (min-width: 800px) {
+    width: 50%;
+  }
+}
