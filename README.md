@@ -1,5 +1,5 @@
 > ## AppUnite-2 // 07.2020
-> ### This work the same like AppUnite-1, but with ( Redux-Saga & Webpack)
+>>> ### *This work the same like AppUnite-1*, but with ( Redux-Saga & Webpack)
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
  
