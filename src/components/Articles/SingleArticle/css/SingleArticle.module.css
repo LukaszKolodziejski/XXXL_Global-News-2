@@ -1,0 +1,46 @@
+.SingleArticle {
+  position: relative;
+}
+
+.SingleArticle__image {
+  display: block;
+  width: 100%;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 17px;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.SingleArticle__title {
+  font-size: 24px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 17px;
+}
+
+.SingleArticle__description {
+  font-size: 17px;
+  line-height: 19px;
+  color: #465252;
+  margin-bottom: 13%;
+}
+
+.Information {
+  margin-bottom: 8.5px;
+}
+
+.Information__data {
+  font-size: 14px;
+  line-height: 16px;
+  color: #606060;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.Information__data:last-child {
+  color: #493be1;
+}
+/*# sourceMappingURL=SingleArticle.module.css.map */

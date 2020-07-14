@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,UAAU,EAAE,MAAM;CAiBnB;;AAhBE,AAAD,kBAAU,CAAC;EACT,UAAU,EAAE,IAAI;EAChB,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,cAAc;EACrC,OAAO,EAAE,IAAI;CAUd;;AARC,MAAM,EAAE,SAAS,EAAE,KAAK;EAPzB,AAAD,kBAAU,CAAC;IAQP,UAAU,EAAE,IAAI;IAChB,qBAAqB,EAAE,cAAc;GAMxC;;;AAHC,MAAM,EAAE,SAAS,EAAE,MAAM;EAZ1B,AAAD,kBAAU,CAAC;IAaP,qBAAqB,EAAE,cAAc;GAExC",
+    "sources": [
+        "../scss/Articles.module.scss"
+    ],
+    "names": [],
+    "file": "Articles.module.css"
+}

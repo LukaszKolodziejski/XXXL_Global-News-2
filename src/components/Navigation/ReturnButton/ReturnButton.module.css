@@ -1,0 +1,8 @@
+.ReturnButton {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 24px 0;
+  text-decoration: none;
+  color: #493be1;
+}

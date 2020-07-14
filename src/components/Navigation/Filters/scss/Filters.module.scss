@@ -1,0 +1,38 @@
+.Filters {
+  padding: 8px 0;
+}
+
+.Dropdown {
+  position: relative;
+  display: inline-block;
+
+  &__content {
+    display: none;
+    position: absolute;
+    left: 0;
+    color: #606060;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: pointer;
+
+    &___active {
+      color: #493be1;
+    }
+
+    .Dropdown:hover & {
+      display: block;
+    }
+
+    div {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      &:hover {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+}
