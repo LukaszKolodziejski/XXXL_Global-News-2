@@ -1,6 +1,6 @@
 > ## AppUnite-2 // 07.2020
 >>> ### *This work the same like AppUnite-1*, but with ( Redux-Saga & Webpack)
->>>> ### *AppUnite-1 was build with (Redux-Thunk) ##### ljfld
+>>>> ### *AppUnite-1 was build with (Redux & Redux-Thunk)* and here is extension of *First Main Project Version > AppUnite-1*
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
  
