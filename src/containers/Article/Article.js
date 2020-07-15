@@ -26,8 +26,8 @@ class Article extends Component {
 }
 
 Article.propTypes = {
-  articles: PropTypes.object.isRequired,
-  articleID: PropTypes.number.isRequired,
+  articles: PropTypes.array.isRequired,
+  articleID: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => ({

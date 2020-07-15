@@ -5,6 +5,11 @@ const MAIN_API = `/everything?q=a&apiKey=`;
 const API_KEY = "21dec1c6cdd34f6986cecd09f8d9c71e";
 const API = `${MAIN_API}${API_KEY}`;
 
+// Redux-Saga
+export const fetchArticles = () => ({
+  type: actionTypes.FETCH_ARTICLES,
+});
+
 export const fetchArticlesStart = () => ({
   type: actionTypes.FETCH_ARTICLES_START,
 });
@@ -18,32 +23,6 @@ export const fetchArticlesFail = (error) => ({
   type: actionTypes.FETCH_ARTICLES_FAIL,
   error,
 });
-
-// Redux-Saga
-// export const fetchArticles = () => ({
-//   type: actionTypes.FETCH_ARTICLES,
-// });
-
-// Redux-Thunk
-export const fetchArticles = () => (dispatch) => {
-  dispatch(fetchArticlesStart());
-  axios
-    .get(API)
-    .then((res) => {
-      console.log(res.data);
-      const fetchArticles = [];
-      for (let key in res.data) {
-        fetchArticles.push({
-          ...res.data[key],
-          id: key,
-        });
-      }
-      dispatch(fetchArticlesSuccess(fetchArticles));
-    })
-    .catch((err) => {
-      dispatch(fetchArticlesFail(err));
-    });
-};
 
 export const fetchArticlesFiltersStart = () => ({
   type: actionTypes.FETCH_ARTICLES_FILTERS_START,
@@ -60,7 +39,7 @@ export const fetchArticlesFiltersFail = (error) => ({
 });
 
 // Redux-Saga
-// export const fetchArticlesFilters = () => ({
+// export const fetchArticlesFilters = (filters) => ({
 //   type: actionTypes.FETCH_ARTICLES_FILTERS,
 // });
 

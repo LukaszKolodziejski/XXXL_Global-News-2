@@ -55,7 +55,7 @@ class Articles extends Component {
 }
 
 Articles.propTypes = {
-  articles: PropTypes.object.isRequired,
+  articles: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired,
 };
 
