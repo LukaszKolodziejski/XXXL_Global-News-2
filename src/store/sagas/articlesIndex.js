@@ -27,15 +27,15 @@ export function* fetchArticlesSaga(action) {
 
 export function* fetchArticlesFiltersSaga(action) {
   yield put(actions.fetchArticlesFiltersStart());
+  const queryApi = yield action.filters
+    .map((filter) =>
+      filter.api.active
+        ? `${filter.api.searchQuery}${filter.api.query}&`
+        : filter.api.mainFullStartQuery
+    )
+    .join("");
+  const newApi = `/everything?${queryApi}apiKey=${API_KEY}`;
   try {
-    const queryApi = yield action.filters
-      .map((filter) =>
-        filter.api.active
-          ? `${filter.api.searchQuery}${filter.api.query}&`
-          : filter.api.mainFullStartQuery
-      )
-      .join("");
-    const newApi = `/everything?${queryApi}apiKey=${API_KEY}`;
     const res = yield axios.get(newApi);
     const fetchArticles = [];
     for (let key in res.data) {

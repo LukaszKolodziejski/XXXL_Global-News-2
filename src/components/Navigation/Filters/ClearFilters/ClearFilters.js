@@ -5,10 +5,8 @@ import * as actions from "../../../../store/actions/index";
 
 import Button from "../../../UI/Button/Button";
 
-class ClearFilters extends Component {
-  state = {};
-
-  clearButtonHandler = () => {
+const ClearFilters = (props) => {
+  const clearButtonHandler = () => {
     const { filters } = { ...this.props };
     filters.forEach((filter) => {
       filter.data.values.forEach((value) => (value.active = false));
@@ -20,18 +18,40 @@ class ClearFilters extends Component {
     this.props.onClear();
     this.props.onClearButtonHandler(filters);
   };
+  return (
+    <Button btnType="Clearbtn" clicked={clearButtonHandler}>
+      Clear Filters
+    </Button>
+  );
+};
 
-  render() {
-    return (
-      <Button btnType="Clearbtn" clicked={this.clearButtonHandler}>
-        Clear Filters
-      </Button>
-    );
-  }
-}
+// class ClearFilters extends Component {
+//   state = {};
+
+//   clearButtonHandler = () => {
+//     const { filters } = { ...this.props };
+//     filters.forEach((filter) => {
+//       filter.data.values.forEach((value) => (value.active = false));
+//       filter.data.dropdownName = filter.data.name;
+//       filter.data.activeValue = "";
+//       filter.api.active = false;
+//       filter.api.query = filter.api.startQuery;
+//     });
+//     this.props.onClear();
+//     this.props.onClearButtonHandler(filters);
+//   };
+
+//   render() {
+//     return (
+//       <Button btnType="Clearbtn" clicked={this.clearButtonHandler}>
+//         Clear Filters
+//       </Button>
+//     );
+//   }
+// }
 
 ClearFilters.propTypes = {
-  filters: PropTypes.object.isRequired,
+  filters: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({

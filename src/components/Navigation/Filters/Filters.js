@@ -94,7 +94,7 @@ class Filters extends Component {
 }
 
 Filters.propTypes = {
-  filters: PropTypes.object.isRequired,
+  filters: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({
