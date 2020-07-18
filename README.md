@@ -3,6 +3,10 @@
 >>> ##### *AppUnite-1 was build with (Redux & Redux-Thunk)* and here is extension of *First Main Project Version > AppUnite-1*
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
+
+- [x] Builded on one of my the best Webpack 
+- [ ] Builded on one of my the best Webpack 
+- [] Builded on one of my the best Webpack 
  
 ```js
 JavaScript                      React.js                      Redux
