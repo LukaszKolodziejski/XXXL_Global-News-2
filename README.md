@@ -1,10 +1,16 @@
 > ## AppUnite-2 // 07.2020
->> ### *This work the same like AppUnite-1*, but with ( Redux-Saga & Webpack)
->>> ##### *AppUnite-1 was build with (Redux & Redux-Thunk)* and here is extension of *First Main Project Version > AppUnite-1*
+>> ### *This work the same like AppUnite-1*, but with moderner & other technologies: 
+- [x] Builded on one of my the best Webpack 
+- [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
+- [x] (AppUnite-2) Works asynchronously with: React.Lazy()
+- [x] All in the function components
+- [x] React Hooks (e.g. useState, useEffect, useCallback)
+- [x] React-Redux Hooks (e.g. useDispatch, useSelector)
+- [ ] (AppUnite-1) Redux & Redux-Thunk 
+- [x] (AppUnite-2) Redux & Redux-Thunk & Redux-Saga 
+- [x] Better syntax of code
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
-
- - [x] Builded on one of my the best Webpack 
  
 ```js
 JavaScript                      React.js                      Redux
