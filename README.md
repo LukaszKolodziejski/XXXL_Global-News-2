@@ -4,9 +4,9 @@
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
 
-- [x] Builded on one of my the best Webpack 
-- [ ] Builded on one of my the best Webpack 
-- [] Builded on one of my the best Webpack 
+> #### - [x] Builded on one of my the best Webpack 
+> #### - [ ] Builded on one of my the best Webpack 
+> #### - [] Builded on one of my the best Webpack 
  
 ```js
 JavaScript                      React.js                      Redux
