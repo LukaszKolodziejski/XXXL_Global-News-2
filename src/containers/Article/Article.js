@@ -1,38 +1,26 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { Fragment } from "react";
+import { useSelector } from "react-redux";
 
 import FullSingleArticle from "../../components/Articles/FullSingleArticle/FullSingleArticle";
 import ReturnButton from "../../components/Navigation/ReturnButton/ReturnButton";
 import Title from "../../components/Title/Title";
-class Article extends Component {
-  state = {};
 
-  render() {
-    const { articles, articleID } = this.props;
-    let fullArticleContent;
-    for (let key in articles[2]) {
-      key == articleID && (fullArticleContent = articles[2][key]);
-    }
+const Article = (props) => {
+  const articles = useSelector((state) => state.articlesIndex.articles);
+  const articleID = useSelector((state) => state.article.articleID);
 
-    return (
-      <Fragment>
-        <Title name={fullArticleContent.title} />
-        <ReturnButton>Return to articles list</ReturnButton>
-        <FullSingleArticle data={fullArticleContent} />
-      </Fragment>
-    );
+  let fullArticleContent;
+  for (let key in articles[2]) {
+    key == articleID && (fullArticleContent = articles[2][key]);
   }
-}
 
-Article.propTypes = {
-  articles: PropTypes.array.isRequired,
-  articleID: PropTypes.string.isRequired,
+  return (
+    <Fragment>
+      <Title name={fullArticleContent.title} />
+      <ReturnButton>Return to articles list</ReturnButton>
+      <FullSingleArticle data={fullArticleContent} />
+    </Fragment>
+  );
 };
 
-const mapStateToProps = (state) => ({
-  articles: state.articlesIndex.articles,
-  articleID: state.article.articleID,
-});
-
-export default connect(mapStateToProps)(Article);
+export default Article;
