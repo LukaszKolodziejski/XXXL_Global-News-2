@@ -15,12 +15,12 @@
 > #### ... to show what I can create, 
  
 ```js
-JavaScript                      React.js                      Redux
-Redux-Thunk                     Redux-Saga                    React Router
-Axios                           SASS / SCSS                   CSS Modules
-CSS3                            function* generator / yield   HTML5                                
-Babel                           ES6                           REST API    
-Webpack                         React.Lazy()                  React.memo() 
+JavaScript                      React.js                           Redux
+Redux-Thunk                     Redux-Saga                         React Router
+Axios                           SASS / SCSS                        CSS Modules
+CSS3                            function* generator / yield        HTML5                                
+Babel                           ES6                                REST API    
+Webpack                         React.Lazy()                       React.memo() 
 React-Redux Hooks               React Hooks
 
 ```
