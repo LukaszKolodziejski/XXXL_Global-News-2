@@ -1,24 +1,31 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../../../store/actions/index";
 
 import Button from "../../UI/Button/Button";
 import ClearFilters from "./ClearFilters/ClearFilters";
 import styles from "./css/Filters.module.css";
 
-class Filters extends Component {
-  state = {
-    change: false,
-  };
+const Filters = (props) => {
+  const [change, setChange] = useState(false);
 
-  componentDidUpdate = () =>
-    this.props.onFetchArticlesFilters(this.props.filters);
+  const filters = useSelector((state) => state.articlesIndex.filters);
 
-  dropdownContentHandler = (value, filterId) => {
-    const { filters } = { ...this.props };
+  const dispatch = useDispatch();
 
-    filters.forEach((filter) => {
+  const onFetchArticlesFilters = (filters) =>
+    dispatch(actions.fetchArticlesFilters(filters));
+  const onDropdownContentHandler = (filters) =>
+    dispatch(actions.dropdownContentHandler(filters));
+
+  useEffect(() => {
+    onFetchArticlesFilters(filters);
+    setChange(false);
+  });
+
+  const dropdownContentHandler = (value, filterId) => {
+    const newFilters = filters;
+    newFilters.forEach((filter) => {
       const { activeValue } = filter.data;
       filter.data.values.forEach((value) => (value.active = false));
       if (filter.id === filterId) {
@@ -28,7 +35,7 @@ class Filters extends Component {
           filter.data.activeValue = value.name;
           filter.api.active = true;
           filterId === "Dates"
-            ? (filter.api.query = this.getIsoDate(value.query))
+            ? (filter.api.query = getIsoDate(value.query))
             : (filter.api.query = value.query);
         } else {
           value.active = false;
@@ -39,12 +46,11 @@ class Filters extends Component {
         }
       }
     });
-
-    this.setState({ change: true });
-    this.props.onDropdownContentHandler(filters);
+    setChange(true);
+    onDropdownContentHandler(newFilters);
   };
 
-  getIsoDate = (time) => {
+  const getIsoDate = (time) => {
     let iso;
     const today = new Date();
     const week = new Date();
@@ -58,54 +64,41 @@ class Filters extends Component {
     return iso;
   };
 
-  clearFiltersHandler = () => this.setState({ change: true });
+  const clearFiltersHandler = useCallback(
+    (newChangeState) => {
+      setChange(newChangeState);
+    },
+    [setChange]
+  );
 
-  render() {
-    const { filters } = this.props;
-
-    const allFilters = filters.map((filter) => (
-      <div key={filter.id} className={styles.Dropdown}>
-        <Button btnType="Dropbtn">{filter.data.dropdownName}</Button>
-        <div className={styles.Dropdown__content}>
-          {filter.data.values.map((value) => (
-            <div
-              key={value.name}
-              className={
-                value.active ? styles.Dropdown__content___active : null
-              }
-              onClick={() => this.dropdownContentHandler(value, filter.id)}
-            >
-              {value.name}
-            </div>
-          ))}
-        </div>
+  const allFilters = filters.map((filter) => (
+    <div key={filter.id} className={styles.Dropdown}>
+      <Button btnType="Dropbtn">{filter.data.dropdownName}</Button>
+      <div className={styles.Dropdown__content}>
+        {filter.data.values.map((value) => (
+          <div
+            key={value.name}
+            className={value.active ? styles.Dropdown__content___active : null}
+            onClick={() => dropdownContentHandler(value, filter.id)}
+          >
+            {value.name}
+          </div>
+        ))}
       </div>
-    ));
+    </div>
+  ));
 
-    return (
-      <Fragment>
-        <nav className={styles.Filters}>
-          {allFilters}
-          <ClearFilters onClear={this.clearFiltersHandler} />
-        </nav>
-      </Fragment>
-    );
-  }
-}
+  const clearFilters = useMemo(
+    () => <ClearFilters onClear={clearFiltersHandler} />,
+    [clearFiltersHandler]
+  );
 
-Filters.propTypes = {
-  filters: PropTypes.array.isRequired,
+  return (
+    <nav className={styles.Filters}>
+      {allFilters}
+      {clearFilters}
+    </nav>
+  );
 };
 
-const mapStateToProps = (state) => ({
-  filters: state.articlesIndex.filters,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  onFetchArticlesFilters: (filters) =>
-    dispatch(actions.fetchArticlesFilters(filters)),
-  onDropdownContentHandler: (filters) =>
-    dispatch(actions.dropdownContentHandler(filters)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Filters);
+export default Filters;
