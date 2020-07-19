@@ -1,5 +1,5 @@
 > ## AppUnite-2 // 07.2020
->> ### *This work the same like AppUnite-1*, but with moderner & other technologies: 
+>> ### *This work the same like AppUnite-1*, but more modern and with new other technologies: 
 - [x] Builded on one of my the best Webpack     
 - [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
 - [x] (AppUnite-2) Works asynchronously with: React.Lazy()
