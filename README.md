@@ -4,11 +4,13 @@
 - [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
 - [x] (AppUnite-2) Works asynchronously with: React.Lazy()
 - [x] All in the function components
-- [x] React Hooks (e.g. useState, useEffect, useCallback)
+- [x] React Hooks (e.g. useState, useEffect, useCallback, useMemo)
 - [x] React-Redux Hooks (e.g. useDispatch, useSelector)
+- [x] React.memo()
 - [ ] (AppUnite-1) Redux & Redux-Thunk 
 - [x] (AppUnite-2) Redux & Redux-Thunk & Redux-Saga 
-- [x] Better syntax of code
+- [x] Better syntax of code & fixed some bugs
+
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
  
@@ -18,7 +20,8 @@ Redux-Thunk                     Redux-Saga                    React Router
 Axios                           SASS / SCSS                   CSS Modules
 CSS3                            function* generator / yield   HTML5                                
 Babel                           ES6                           REST API    
-Webpack
+Webpack                         React.Lazy()                  React.memo() 
+React-Redux Hooks               React Hooks
 
 ```
 
