@@ -3,12 +3,12 @@
 - [x] Builded on one of my the best Webpack     
 - [ ] (AppUnite-1) Redux & Redux-Thunk 
 - [x] (AppUnite-2) Redux & Redux-Thunk & Redux-Saga 
-- [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
-- [x] (AppUnite-2) Works asynchronously with: React.Lazy()
 - [x] All in the function components
 - [x] React Hooks (e.g. useState, useEffect, useCallback, useMemo)
 - [x] React-Redux Hooks (e.g. useDispatch, useSelector)
 - [x] React.memo()
+- [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
+- [x] (AppUnite-2) Works asynchronously with: React.Lazy()
 - [x] Better syntax of code & fixed some bugs
 
 > #### I connected here a lot of technologies in one place:
