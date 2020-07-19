@@ -21,7 +21,7 @@ const ClearFilters = (props) => {
       filter.api.active = false;
       filter.api.query = filter.api.startQuery;
     });
-    props.onClear();
+    props.onClear(true);
     onClearButtonHandler(filters);
   };
   return (
