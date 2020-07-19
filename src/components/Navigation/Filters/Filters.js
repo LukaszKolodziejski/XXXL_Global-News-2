@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PropTypes from "prop-types";
 import * as actions from "../../../store/actions/index";
 
 import Button from "../../UI/Button/Button";
@@ -100,10 +99,6 @@ const Filters = (props) => {
       {clearFilters}
     </nav>
   );
-};
-
-Filters.propTypes = {
-  filters: PropTypes.array.isRequired,
 };
 
 export default Filters;
