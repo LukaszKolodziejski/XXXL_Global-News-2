@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import PropTypes from "prop-types";
 import * as actions from "../../../../store/actions/index";
 
 import Button from "../../../UI/Button/Button";
@@ -29,10 +28,6 @@ const ClearFilters = (props) => {
       Clear Filters
     </Button>
   );
-};
-
-ClearFilters.propTypes = {
-  filters: PropTypes.array.isRequired,
 };
 
 export default ClearFilters;

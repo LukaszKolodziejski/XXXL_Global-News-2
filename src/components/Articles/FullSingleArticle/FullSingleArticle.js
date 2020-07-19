@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import styles from "./css/FullSingleArticle.module.css";
 import Button from "../../UI/Button/Button";
 
-const FullSingleArticle = (props) => {
+const FullSingleArticle = React.memo((props) => {
   const { data } = props;
   const convertDate = (date) => {
     const d = new Date(date);
@@ -38,7 +38,7 @@ const FullSingleArticle = (props) => {
       </article>
     </Fragment>
   );
-};
+});
 
 FullSingleArticle.propTypes = {
   data: PropTypes.object.isRequired,
