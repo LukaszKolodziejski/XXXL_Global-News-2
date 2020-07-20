@@ -32,7 +32,7 @@ const SingleArticle = React.memo((props) => {
 
 SingleArticle.propTypes = {
   data: PropTypes.object.isRequired,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 };
 
 export default SingleArticle;
