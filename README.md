@@ -1,7 +1,7 @@
 > ## AppUnite-2 // 07.2020
 >> ### *This work the same like AppUnite-1*, but more Modern and with New Other Technologies: 
-- [x] Builded on one of my the best Webpack     
-- [ ] (AppUnite-1) Redux & Redux-Thunk 
+- [x] Builded on one of my the best Webpack
+- [ ] (AppUnite-1) Redux & Redux-Thunk
 - [x] (AppUnite-2) Redux & Redux-Thunk & Redux-Saga 
 - [x] All in the function components
 - [x] React Hooks (e.g. useState, useEffect, useCallback, useMemo)
@@ -10,6 +10,7 @@
 - [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
 - [x] (AppUnite-2) Works asynchronously with: React.Lazy()
 - [x] Better syntax of code & fixed some bugs
+- [x] More Components to No Repeat the same Code
 
 > #### I connected here a lot of technologies in one place:
 > #### ... to show what I can create, 
