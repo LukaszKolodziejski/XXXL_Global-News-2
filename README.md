@@ -12,6 +12,7 @@
 - [x] Testing with Enzyme
 - [x] Better syntax of code & fixed some bugs
 - [x] More Components to No Repeat the same Code
+---
 
 > ### I connected here a lot of technologies in one place:
 > ### ... to show what I can create, 
