@@ -9,7 +9,7 @@ const Title = (props) => (
 );
 
 Title.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
 };
 
 export default Title;
