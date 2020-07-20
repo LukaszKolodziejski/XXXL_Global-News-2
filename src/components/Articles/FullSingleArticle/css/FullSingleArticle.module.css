@@ -13,38 +13,12 @@
   border-radius: 4px 4px 0px 0px;
 }
 
-.FullSingleArticle__title {
-  font-size: 24px;
-  line-height: 27px;
-  color: #000000;
-  margin-bottom: 17px;
-}
-
-.FullSingleArticle__description {
-  font-size: 17px;
-  line-height: 19px;
-  color: #465252;
-  margin-bottom: 13%;
-}
-
-.Information {
+.FullSingleArticle__information {
   margin-bottom: 8.5px;
 }
 
-.Information__data {
-  font-size: 14px;
-  line-height: 16px;
-  color: #606060;
-  margin-right: 16px;
-  text-decoration: none;
-}
-
-.Information__data:nth-child(3) {
-  color: #493be1;
-}
-
 @media (min-width: 800px) {
-  .Information {
+  .FullSingleArticle__information {
     margin: 0 30%;
   }
 }

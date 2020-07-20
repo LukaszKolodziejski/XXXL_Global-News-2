@@ -1,0 +1,26 @@
+.Information {
+  font-size: 14px;
+  line-height: 16px;
+  color: #606060;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.Information:nth-child(3) {
+  color: #493be1;
+}
+
+.Description__title {
+  font-size: 24px;
+  line-height: 27px;
+  color: #000000;
+  margin-bottom: 17px;
+}
+
+.Description__description {
+  font-size: 17px;
+  line-height: 19px;
+  color: #465252;
+  margin-bottom: 13%;
+}
+/*# sourceMappingURL=Information.module.css.map */

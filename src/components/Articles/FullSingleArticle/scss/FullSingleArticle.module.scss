@@ -12,34 +12,10 @@
     border-radius: 4px 4px 0px 0px;
   }
 
-  &__title {
-    font-size: 24px;
-    line-height: 27px;
-    color: #000000;
-    margin-bottom: 17px;
-  }
-
-  &__description {
-    font-size: 17px;
-    line-height: 19px;
-    color: #465252;
-    margin-bottom: 13%;
-  }
-}
-
-.Information {
-  margin-bottom: 8.5px;
-  &__data {
-    font-size: 14px;
-    line-height: 16px;
-    color: #606060;
-    margin-right: 16px;
-    text-decoration: none;
-    &:nth-child(3) {
-      color: #493be1;
+  &__information {
+    margin-bottom: 8.5px;
+    @media (min-width: 800px) {
+      margin: 0 30%;
     }
-  }
-  @media (min-width: 800px) {
-    margin: 0 30%;
   }
 }
