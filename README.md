@@ -9,6 +9,7 @@
 - [x] React.memo()
 - [ ] (AppUnite-1) Works asynchronously with: asyncComponent()
 - [x] (AppUnite-2) Works asynchronously with: React.Lazy()
+- [x] Testing with Enzyme
 - [x] Better syntax of code & fixed some bugs
 - [x] More Components to No Repeat the same Code
 
