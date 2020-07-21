@@ -1,4 +1,4 @@
-> ## AppUnite-2 // 07.2020
+> ## AppUnite-2 // 07.2020 
 >> ### *This work the same like AppUnite-1*, but more Modern and with New Other Technologies: 
 - [x] Builded on one of my the best Webpack
 - [ ] (AppUnite-1) Redux & Redux-Thunk
